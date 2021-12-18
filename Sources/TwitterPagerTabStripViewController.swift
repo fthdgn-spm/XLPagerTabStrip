@@ -156,6 +156,17 @@ open class TwitterPagerTabStripViewController: PagerTabStripViewController, Page
         return titleScrollView
     }()
 
+    private lazy var pageControl: FXPageControl = { [unowned self] in
+        let pageControl = FXPageControl()
+        pageControl.backgroundColor = .clear
+        pageControl.dotSize = 3.8
+        pageControl.dotSpacing = 4.0
+        pageControl.dotColor = self.settings.style.dotColor
+        pageControl.selectedDotColor = self.settings.style.selectedDotColor
+        pageControl.isUserInteractionEnabled = false
+        return pageControl
+    }()
+
     private var childTitleLabels = [UILabel]()
 
     private func reloadNavigationViewItems() {

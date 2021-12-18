@@ -15,11 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "XLPagerTabStrip",
-            path: "Sources",
-            exclude: [
-                "FXPageControl.h",
-                "FXPageControl.m"
-            ]
+            path: "Sources"
         ),
         .testTarget(
             name: "XLPagerTabStripTests",
